@@ -151,7 +151,89 @@ Shortest paths from node 'A':
 
 === Code Execution Successful ===
 ```
+## Code in C
+```
+#include <stdio.h>
+#include <stdbool.h>
+#include <limits.h>
 
+#define N 9
+
+// Function to find the vertex with the minimum distance value
+int minDist(int dist[N], bool sptSet[N]){
+    int cur = INT_MAX, minIdx;
+
+    for (int i = 0; i < N; i++){
+        if (!sptSet[i] && dist[i] <= cur){
+            cur = dist[i];
+            minIdx = i;
+        }
+    }
+    return minIdx;
+}
+
+// Function to print the solution
+void printSolution(int dist[]){
+    printf("Vertex \t\t Distance from Source\n");
+    for (int i = 0; i < N; i++)
+        printf("%d \t\t\t\t %d\n", i, dist[i]);
+}
+
+// Dijkstra's algorithm implementation
+void dijkstra(int graph[N][N], int src){
+    int dist[N];   // Output array. dist[i] will hold the shortest distance from src to i
+    bool sptSet[N]; // sptSet[i] will be true if vertex i is included in the shortest path tree
+
+    // Initialize all distances as INFINITE and sptSet[] as false
+    for (int i = 0; i < N; i++) {
+        dist[i] = INT_MAX;
+        sptSet[i] = false;
+    }
+
+    // Distance of source vertex from itself is always 0
+    dist[src] = 0;
+
+    // Find shortest path for all vertices
+    for (int count = 0; count < N - 1; count++) {
+        // Pick the minimum distance vertex from the set of vertices not yet processed
+        int u = minDist(dist, sptSet);
+
+        // Mark the picked vertex as processed
+        sptSet[u] = true;
+
+        // Update dist[] value of the adjacent vertices of the picked vertex
+        for (int v = 0; v < N; v++) {
+            // Update dist[v] only if:
+            // - It's not in the sptSet
+            // - There's an edge from u to v
+            // - The total weight of path from src to v through u is smaller than the current value of dist[v]
+            if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] < dist[v]) {
+                dist[v] = dist[u] + graph[u][v];
+            }
+        }
+    }
+
+    // Print the constructed distance array
+    printSolution(dist);
+}
+
+int main(){
+    // Example graph (can be modified as needed)
+    int graph[N][N] = { { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
+                        { 4, 0, 8, 0, 0, 0, 0, 11, 0 },
+                        { 0, 8, 0, 7, 0, 4, 0, 0, 2 },
+                        { 0, 0, 7, 0, 9, 14, 0, 0, 0 },
+                        { 0, 0, 0, 9, 0, 10, 0, 0, 0 },
+                        { 0, 0, 4, 14, 10, 0, 2, 0, 0 },
+                        { 0, 0, 0, 0, 0, 2, 0, 1, 6 },
+                        { 8, 11, 0, 0, 0, 0, 1, 0, 7 },
+                        { 0, 0, 2, 0, 0, 0, 6, 7, 0 } };
+
+    dijkstra(graph, 0); // Starting from vertex 0
+
+    return 0;
+}
+```
 
 ## Distance Vector Routing Algorithm
 
