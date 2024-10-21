@@ -82,6 +82,9 @@
 
 11. **Access FTP:**
     - Type:
+    - ```bash
+      ftp
+      ```
       ```bash
       ftp 10.10.10.2
       ```
@@ -98,6 +101,9 @@
 12. **Access FTP from PC2:**
     - Open **Command Prompt** on PC2.
     - Type:
+      ```bash
+      ftp
+      ```
       ```bash
       ftp 10.10.10.2
       ```
