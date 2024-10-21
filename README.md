@@ -1,2 +1,0 @@
-# cn
-CN FOR EXAM
