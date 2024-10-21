@@ -82,7 +82,7 @@
 
 11. **Access FTP:**
     - Type:
-    - ```bash
+     ```bash
       ftp
       ```
       ```bash
