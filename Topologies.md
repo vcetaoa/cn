@@ -1,6 +1,6 @@
 # **Network Topologies in Cisco Packet Tracer**
 
-![Screenshot](./images/Screenshot%202024-10-22%20004556.png)
+![Screenshot](./images/Topologies.png)
 
 ---
 
