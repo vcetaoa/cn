@@ -1,6 +1,8 @@
 
 # Basic Networking Commands in Linux
 
+## use sudo if getting error
+
 This guide covers various essential networking commands in Linux, commonly used for network diagnostics and configuration.
 
 ## 1. **ping**
