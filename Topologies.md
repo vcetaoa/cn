@@ -1,6 +1,6 @@
 # Network Topologies in Cisco Packet Tracer
 
-![All Topologies](/Screenshot 2024-10-22 003922.png "..")
+![All Topologies](/Screenshot 2024-10-22 003922.png"..")
 
 
 ## 1. Mesh Topology
