@@ -1,6 +1,16 @@
-# Network Topologies in Cisco Packet Tracer
+# **Network Topologies in Cisco Packet Tracer**
 
 ![Screenshot](./images/Screenshot%202024-10-22%20004556.png)
+
+---
+
+## **Download Network Topology Packet Tracer File**
+
+You can download the Packet Tracer file containing the network topologies using the link below:
+
+[Download .pkt file](./Topologies.pkt)
+
+---
 
 
 ## 1. Mesh Topology
