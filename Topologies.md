@@ -8,7 +8,7 @@
 
 You can download the Packet Tracer file containing the network topologies using the link below:
 
-[Download .pkt file](./Topologies.pkt)
+[Download .pkt file](./pkt/Topologies.pkt)
 
 ---
 
