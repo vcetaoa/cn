@@ -4,7 +4,7 @@
 
 ## **Download Network Topology Packet Tracer File**
 
-[Download .pkt file](./ftp.pkt)
+[Download .pkt file](./pkt/ftp.pkt)
 
 ## **Network Setup**
 
